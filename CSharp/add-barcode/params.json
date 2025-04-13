@@ -1,0 +1,38 @@
+{
+  "job": "00012345",
+  "user": "YOUR_USERNAME",
+  "key": "YOUR_APIKEY",
+  "inputOptions": {
+    "source": "https://pdfteam.com/samples/invoice.pdf"
+  },
+  "outputOptions": {
+    "storage": true,
+    "file": "addbarcode_csharp.pdf"
+  },
+  "overlays": [
+    {
+      "position": {
+        "x": "179mm",
+        "y": "237mm"
+      },
+      "type": "barcode",
+      "config": {
+        "data": "https://pdfteam.com"
+      }
+    },
+    {
+      "rotate": 90,
+      "position": {
+        "x": "10mm",
+        "y": "middle"
+      },
+      "type": "barcode",
+      "config": {
+        "humanReadableText": false,
+        "type": 7,
+        "moduleHeight": 10,
+        "data": "00012345"
+      }
+    }
+  ]
+}
